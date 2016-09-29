@@ -1,5 +1,3 @@
-default ubuntu1404
-
 label ubuntu1404
   kernel ubuntu1404/linux
   append initrd=ubuntu1404/initrd.gz ks=http://coreitpro-kickstart.s3-website-us-east-1.amazonaws.com/ubuntu1404/ks.cfg
@@ -7,6 +5,11 @@ label ubuntu1404
   timeout 0
 label ubuntu1504
   kernel ubuntu1504/linux
-  append initrd=ubuntu1504/initrd.gz ks=http://coreitpro-kickstart.s3-website-us-east-1.amazonaws.com/ubuntu1504/ks.cfg
+  append initrd=ubuntu1504/initrd.gz ks=http://coreitpro-kickstart.s3-website-us-east-1.amazonaws.com/ubuntu1404/ks.cfg
+  prompt 0
+  timeout 0
+label ubuntu1604
+  kernel ubuntu1604/linux
+  append initrd=ubuntu1604/initrd.gz priority=critical interface=auto netcfg/dhcp_timeout=120 console-setup/layoutcode=us auto=true url=http://coreitpro-kickstart.s3-website-us-east-1.amazonaws.com/preseed.cfg
   prompt 0
   timeout 0
