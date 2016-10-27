@@ -1,2 +1,23 @@
 [stack]
 devstack-[1:3].coreitpro.com
+
+
+### These roles are used with kargo
+### https://github.com/kubespray/kargo
+
+[kube-master]
+devstack-1.coreitpro.com ansible_user=stack
+
+[etcd]
+devstack-1.coreitpro.com ansible_user=stack
+devstack-2.coreitpro.com ansible_user=stack
+devstack-3.coreitpro.com ansible_user=stack
+
+[kube-node]
+devstack-1.coreitpro.com ansible_user=stack
+devstack-2.coreitpro.com ansible_user=stack
+devstack-3.coreitpro.com ansible_user=stack
+
+[k8s-cluster:children]
+kube-node
+kube-master
