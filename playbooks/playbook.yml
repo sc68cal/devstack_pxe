@@ -1,0 +1,9 @@
+---
+
+- name: Set up SSH
+  hosts: stack
+  become: True
+
+
+  roles:
+    - { role: nickjj.sshd, tags: sshd }
