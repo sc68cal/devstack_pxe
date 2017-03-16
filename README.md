@@ -12,6 +12,12 @@ and having it automatically configure itself for use with DevStack.
 install](https://github.com/nickjj/ansible-sshd), and will be
 required.
 
+To install `ansible-sshd` do the following:
+
+```
+ansible-galaxy install nickjj.sshd
+```
+
 Invocation: 
 
 ```
