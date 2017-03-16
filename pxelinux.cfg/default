@@ -1,4 +1,4 @@
-default ubuntu1604
+default ubuntu1610
 
 label ubuntu1404
   kernel ubuntu1404/linux
@@ -13,5 +13,13 @@ label ubuntu1504
 label ubuntu1604
   kernel ubuntu1604/linux
   append initrd=ubuntu1604/initrd.gz priority=critical interface=auto netcfg/dhcp_timeout=120 console-setup/layoutcode=us auto=true url=http://coreitpro-kickstart.s3-website-us-east-1.amazonaws.com/preseed.cfg
+  prompt 0
+  timeout 0
+label ubuntu1610
+  kernel ubuntu1610/linux
+  append initrd=ubuntu1610/initrd.gz priority=critical interface=auto netcfg/dhcp_timeout=120 console-setup/layoutcode=us auto=true url=http://coreitpro-kickstart.s3-website-us-east-1.amazonaws.com/preseed.cfg
+  path ubuntu1610/boot-screens/
+  include ubuntu1610/boot-screens/menu.cfg
+  default ubuntu1610/boot-screens/vesamenu.c32
   prompt 0
   timeout 0
