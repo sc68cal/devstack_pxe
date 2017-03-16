@@ -1,6 +1,16 @@
 ---
 
-- name: Set up SSH
+- name: Add SSH keys
+  hosts: stack
+  tasks:
+      - name: Add my key from GitHub
+        authorized_key:
+          user: stack
+          state: present
+          key: https://github.com/sc68cal.keys
+
+
+- name: Lock down SSHD
   hosts: stack
   become: True
 
