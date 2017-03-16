@@ -21,5 +21,5 @@ ansible-galaxy install nickjj.sshd
 Invocation: 
 
 ```
-ansible-playbook -b -v -K -i inventory/inventory.yml playbooks/playbook.yml
+ansible-playbook -b -v -k -K -i inventory/inventory.yml playbooks/playbook.yml
 ```
